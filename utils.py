@@ -39,7 +39,7 @@ def post_process(text):
 """ adapted from https://github.com/Babelscape/rebel/blob/main/src/utils.py"""
 
 def decode_pred_triplets(text):
-    		
+			
 		triplets = []
 
 		text = text.replace("<pad>", "").replace("</s>", "")

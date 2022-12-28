@@ -24,7 +24,7 @@ def read_data(path, k_shot):
 	return sentences, tuples
 
 def generate_target(d):
-		"""
+	"""
 	takes a aspect triple dictionary and linearizes it
 	"""
 	summary = ""
