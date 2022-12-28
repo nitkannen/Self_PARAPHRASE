@@ -1,0 +1,2 @@
+# Self_PARAPHRASE
+own implementation of Aspect_Quad_Extraction_Paper
