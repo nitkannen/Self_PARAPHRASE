@@ -55,11 +55,10 @@ def decode_pred_triplets(text):
 				#print(token)
 				#print(triplet)
 
-				"""show stopper is fat and big so show stopper is bad"""
+				"""show stopper is fat and big so sentiment is negative"""
 				p1, p2 = triplet.split('so')
 				aspect, opinion = p1.split('is')
 				_, sentiment = p2.split('is')
-				sentiment = inv_sent_map[sentiment.strip()]
 				entry = {"aspect": aspect.strip(), "opinion": opinion.strip(), "sentiment": sentiment.strip()}
 				if entry not in triplets:
 					triplets.append(entry)
