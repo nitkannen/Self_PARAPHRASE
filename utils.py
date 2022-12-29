@@ -52,6 +52,7 @@ def decode_pred_triplets(text):
 		# print(text_processed)
 		for triplet in text_processed.split(' [SSEP] '):
 			#print(token)
+			print(triplet)
 			sentiment = inv_sent_map[triplet.split()[2].strip()]
 			"""It is great because show stoper is fat and big"""
 			_, p2 = triplet.split('because')
