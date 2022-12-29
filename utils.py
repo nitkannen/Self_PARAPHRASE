@@ -50,16 +50,20 @@ def decode_pred_triplets(text):
 		current = None
 		aspect, opinion, sentiment = "", "", ""
 		# print(text_processed)
-		for triplet in text_processed.split(' [SSEP] '):
-			#print(token)
-			print(triplet)
-			sentiment = inv_sent_map[triplet.split()[2].strip()]
-			"""It is great because show stoper is fat and big"""
-			_, p2 = triplet.split('because')
-			aspect, opinion = p2.split('is')
-			entry = {"aspect": aspect.strip(), "opinion": opinion.strip(), "sentiment": sentiment.strip()}
-			if entry not in triplets:
-				triplets.append(entry)
+		try:
+			for triplet in text_processed.split(' [SSEP] '):
+				#print(token)
+				print(triplet)
+
+				sentiment = inv_sent_map[triplet.split()[2].strip()]
+				"""It is great because show stoper is fat and big"""
+				_, p2 = triplet.split('because')
+				aspect, opinion = p2.split('is')
+				entry = {"aspect": aspect.strip(), "opinion": opinion.strip(), "sentiment": sentiment.strip()}
+				if entry not in triplets:
+					triplets.append(entry)
+		except:
+			pass
 
 		return triplets
 
