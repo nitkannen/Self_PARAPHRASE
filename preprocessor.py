@@ -73,6 +73,7 @@ def get_transformed_data(sentences_list, tuples_list):
 		tup_dict = generate_triplet_dict(tup, sent)
 		target = generate_target(tup_dict)
 		inputs.append(sent)
+		print(target)
 		targets.append(target)
 
 	return inputs, targets
